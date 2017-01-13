@@ -19,7 +19,6 @@ class LetterBody extends Component {
     if (!this.state.accepted) {
       this.setState({accepted: true});
     }
-
   }
 
   handleRejectedClick(event) {
@@ -36,18 +35,28 @@ class LetterBody extends Component {
   }
 
 
-
   render(){
+
+    let className;
+    let className1;
+      if (this.state.accepted) {
+        className1 = "grey";
+        className = "red";
+      } else {
+        className1 = "red";
+        className = "grey";
+      }
+
     return (
       <div className="row">
         <Addresse
         name={this.state.name}
         handleNameEntered={this.handleNameEntered}
+        handleAcceptedClick={this.handleAcceptedClick}
+        handleRejectedClick={this.handleRejectedClick}
+        className={className}
+        className1={className1}
         />
-        <div className="row small-12 large-12 columns">
-          <button id="accepted" type="button" onClick={this.handleAcceptedClick}>Accepted</button>
-          <button id="rejected" type="button" onClick={this.handleRejectedClick}>Rejected</button>
-        </div>
         <div>
           <div id="letter" className="large-8 large-centered columns">
             <div className="small-2 small-centered columns">

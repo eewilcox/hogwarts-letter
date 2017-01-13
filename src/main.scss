@@ -12,12 +12,12 @@
 
 #accepted {
   padding: 8px;
-  background-color: grey;
+
 }
 
 #rejected {
   padding: 8px;
-  background-color: red;
+
 }
 
 h1, h4 {
@@ -29,4 +29,12 @@ p {
   font-size: 1.5rem;
   font-family: fantasy;
   margin: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.grey {
+  background-color: grey;
 }
